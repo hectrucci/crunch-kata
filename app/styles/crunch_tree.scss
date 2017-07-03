@@ -1,0 +1,38 @@
+.crunch-tree-item-wrapper {
+  padding-left: 30px;
+
+  .crunch-tree-category {
+    color: $tree-category-color;
+
+    .glyphicon {
+      font-size: 10px;
+      @include transform-transition(0.3s, ease);
+    }
+
+    &:not(.collapsed) {
+      .glyphicon {
+        @include rotate(90deg);
+      }
+    }
+  }
+}
+
+.root-container > div > .crunch-tree-item-wrapper {
+  padding-left: 0;
+}
+
+.crunch-tree-item-wrapper .crunch-tree-category,
+div.crunch-tree-variable {
+  width: 100%;
+  text-align: left;
+  white-space: normal;
+  border: none;
+}
+
+div.crunch-tree-variable {
+  color: $tree-variable-color;
+
+  .glyphicon {
+    font-size: 10px;
+  }
+}

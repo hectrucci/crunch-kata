@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crunch-Kata</title>
+    <% for (var i = 0; i < htmlWebpackPlugin.files.css.length; i++) { %>
+        <link rel="stylesheet" type="text/css" href="<%= htmlWebpackPlugin.files.css[i] %>">
+    <% } %>
+</head>
+<body ng-app="crunchKata">
+    <div class="container" ng-controller="mainController as mainCtrl" ng-cloak>
+        <header class="row">
+            <div class="col-sm-12 crunch-main-title">
+                <h1>Crunch-Kata</h1>
+            </div>
+        </header>
+        <div class="row">
+            <aside class="col-sm-4 crunch-side-bar">
+                <crunch-tree tree="mainCtrl.tree"
+                             display-info="mainCtrl.displayInfo({node: node})"
+                             title="Brand Tracking: On-Demand Taxis and Independent Coffee"></crunch-tree>
+            </aside>
+            <section class="col-sm-6 main-container">
+                <div class="selected-variable" ng-show="mainCtrl.selectedVariable">
+                    <h3>{{mainCtrl.selectedVariable.name || mainCtrl.selectedVariable.scale}}</h3>
+                    <p ng-show="mainCtrl.selectedVariable.name"><b>Name:</b> {{mainCtrl.selectedVariable.name}}</p>
+                    <p ng-show="mainCtrl.selectedVariable.scale"><b>Scale:</b> {{mainCtrl.selectedVariable.scale}}</p>
+                    <p ng-show="mainCtrl.selectedVariable.type"><b>Type:</b> {{mainCtrl.selectedVariable.type}}</p>
+                    <p ng-show="mainCtrl.selectedVariable.description"><b>Description:</b> {{mainCtrl.selectedVariable.description}}</p>
+                    <p><b>Variable's position:</b> {{mainCtrl.findPositionByName(mainCtrl.selectedVariable.name || mainCtrl.selectedVariable.scale, mainCtrl.tree)}}</p>
+                </div>
+                <div ng-show="!mainCtrl.selectedVariable">
+                    <h3>Select a Variable</h3>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<% for (var j = 0; j < htmlWebpackPlugin.files.js.length; j++) { %>
+    <script src="<%= htmlWebpackPlugin.files.js[j] %>"></script>
+<% } %>
+</html>

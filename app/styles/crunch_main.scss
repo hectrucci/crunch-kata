@@ -1,0 +1,18 @@
+.crunch-main-title {
+  border-bottom: solid 1px $crunch-border-color;
+}
+
+.crunch-side-bar {
+  border-right: solid 1px $crunch-border-color;
+
+  @media (max-width: 768px) {
+    border-right: none;
+    border-bottom: solid 1px $crunch-border-color;
+  }
+}
+
+.main-container {
+  h3 {
+    margin-top: 10px;
+  }
+}

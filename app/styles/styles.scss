@@ -1,0 +1,13 @@
+// bootstrap
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// variables
+@import "./variables.scss";
+
+// mixins
+@import "./mixins.scss";
+
+// app styles
+@import "./crunch_main.scss";
+@import "./crunch_tree.scss";

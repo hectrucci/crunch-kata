@@ -1,0 +1,15 @@
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin transform-transition($time, $timing-function) {
+  -webkit-transition: -webkit-transform $time $timing-function;
+  -moz-transition: -moz-transition $time $timing-function;
+  -o-transition: -o-transition $time $timing-function;
+  transition: -webkit-transform $time $timing-function;
+  transition: transform $time $timing-function;
+}

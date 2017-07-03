@@ -1,0 +1,21 @@
+<div class="crunch-tree-item-wrapper">
+    <div ng-if="treeNode.children">
+        <div class="btn btn-default crunch-tree-category collapsed"
+             data-target="#{{id}}"
+             data-toggle="collapse">
+            <i class="glyphicon glyphicon-chevron-right"></i>
+            {{treeNode.name || treeNode.scale}}
+        </div>
+        <div id="{{id}}" class="accordion-body collapse">
+            <crunch-tree tree="treeNode" display-info="displayInfo({node: node})"></crunch-tree>
+        </div>
+    </div>
+    <div ng-if="!treeNode.children"
+         ng-click="displayInfo({node: treeNode})"
+         class="crunch-tree-variable btn btn-default">
+        <div>
+            <i class="glyphicon glyphicon-minus"></i>
+            {{treeNode.name || treeNode.scale}}
+        </div>
+    </div>
+</div>

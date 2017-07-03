@@ -1,0 +1,8 @@
+<div ng-class="{'root-container': tree.isHead}">
+    <div ng-if="tree.isHead">
+        <h4>{{title}}</h4>
+    </div>
+    <div ng-repeat="child in tree.children">
+        <crunch-tree-node tree-node="child" display-info="displayInfo({node: node})"></crunch-tree-node>
+    </div>
+</div>
