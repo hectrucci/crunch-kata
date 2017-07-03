@@ -22,7 +22,7 @@ describe('crunchTreeNodeDirective', () => {
     }));
 
 
-    it('should pass', () => {
+    it('Should set an ID', () => {
         // given
         template = angular.element('<crunch-tree-node></crunch-tree-node>');
 

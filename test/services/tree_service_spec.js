@@ -49,7 +49,7 @@ describe('TreeService', () => {
         }];
     });
 
-    it('Should get the variable\'s position in the tree', () => {
+    it('Should create a new tree', () => {
         // when
         let treePromise = TreeService.createNewTree(order, variables);
 
