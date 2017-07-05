@@ -4,15 +4,24 @@ export default App => {
 
         const orderService = {};
 
-        orderService.findPositionByName = (name, tree) => {
+        const memo = {};
+
+        orderService.findPositionByName = (name = '', tree) => {
             const variablesData = VariablesService.getVariables();
             const variablesKeys = Object.keys(variablesData);
+
+            if (memo[name]) {
+                return memo[name];
+            }
 
             for (let i = 0; i < variablesKeys.length; i++) {
                 var key = variablesKeys[i];
 
                 if (variablesData[key].name === name || variablesData[key].scale === name) {
-                    return tree.positions.indexOf(key) + 1;
+                    const position = tree.positions.indexOf(key) + 1;
+                    memo[name] = position;
+
+                    return position;
                 }
             }
 

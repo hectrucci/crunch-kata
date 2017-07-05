@@ -44,11 +44,11 @@ export default App => {
             };
         };
 
-        const populateTree = (orderArray, variables) => {
+        const populateTree = (orderArray) => {
             positionArray = [];
             const head = createNode('graph');
 
-            addChildren(head, orderArray, variables);
+            addChildren(head, orderArray);
 
             head.isHead = true;
             head.positions = angular.copy(positionArray);
