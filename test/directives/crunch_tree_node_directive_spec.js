@@ -13,7 +13,7 @@ describe('crunchTreeNodeDirective', () => {
     beforeEach(angular.mock.module('crunchKata'));
 
     // inject
-    beforeEach(inject(function (_$compile_, _$controller_, _$rootScope_, _$templateCache_) {
+    beforeEach(inject((_$compile_, _$controller_, _$rootScope_, _$templateCache_) => {
         $compile = _$compile_;
         $controller = _$controller_;
         $rootScope = _$rootScope_;
