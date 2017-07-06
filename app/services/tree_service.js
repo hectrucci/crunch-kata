@@ -45,8 +45,9 @@ export default App => {
         };
 
         const populateTree = (orderArray) => {
-            positionArray = [];
             const head = createNode('graph');
+
+            positionArray = [];
 
             addChildren(head, orderArray);
 
