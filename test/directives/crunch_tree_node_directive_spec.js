@@ -1,13 +1,13 @@
 /* globals beforeEach, describe, expect, it, angular, inject */
 
 describe('crunchTreeNodeDirective', () => {
-    var $compile;
-    var $controller;
-    var $scope;
-    var $templateCache;
-    var element;
-    var template;
-    var $rootScope;
+    let $compile,
+        $controller,
+        $scope,
+        $templateCache,
+        element,
+        template,
+        $rootScope;
 
     // module
     beforeEach(angular.mock.module('crunchKata'));
